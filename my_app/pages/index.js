@@ -64,7 +64,6 @@ export default function Home() {
   // walletConnected keep track of whether the user's wallet is connected or not
   const [walletConnected, setWalletConnected] = useState(false);
 
-
   const getAmounts = async () => {
     try {
       const provider = await getProviderOrSigner(false);
@@ -87,7 +86,6 @@ export default function Home() {
     }
   };
 
- 
   const _swapTokens = async () => {
     try {
       // Convert the amount entered by the user to a BigNumber using the `parseEther` library from `ethers.js`
@@ -116,7 +114,6 @@ export default function Home() {
     }
   };
 
-  
   const _getAmountOfTokensReceivedFromSwap = async (_swapAmount) => {
     try {
       const _swapAmountWEI = utils.parseEther(_swapAmount.toString());
@@ -140,7 +137,6 @@ export default function Home() {
     }
   };
 
-  
   const _addLiquidity = async () => {
     try {
       const addEtherWei = utils.parseEther(addEther.toString());
@@ -222,7 +218,6 @@ export default function Home() {
     }
   };
 
-
   const getProviderOrSigner = async (needSigner = false) => {
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
@@ -254,7 +249,6 @@ export default function Home() {
     }
   }, [walletConnected]);
 
- 
   const renderButton = () => {
     if (!walletConnected) {
       return (
@@ -440,13 +434,11 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodev.svg" />
+          <img className={styles.image} src="./settler.png" />
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        Made with &#10084; by Frank
-      </footer>
+      <footer className={styles.footer}>Made with &#10084; by Frank</footer>
     </div>
   );
 }
