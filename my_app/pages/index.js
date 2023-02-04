@@ -403,15 +403,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Crypto Devs</title>
+        <title>Settler</title>
         <meta name="description" content="Exchange-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs Exchange!</h1>
+          <h1 className={styles.title}>Welcome to settler Exchange!</h1>
           <div className={styles.description}>
-            Exchange Ethereum &#60;&#62; Crypto Dev Tokens
+            Exchange Ethereum &#60;&#62; Crypto Devs Tokens
           </div>
           <div>
             <button
